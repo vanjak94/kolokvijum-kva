@@ -1,0 +1,23 @@
+<h3>Lista svih racuna</h3>
+<table class="table table-dark" *ngFor="let racun of listaRacuni">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Banka Id</th>
+      <th scope="col">Broj racuna</th>
+      <th scope="col">Stanje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ racun.id }}</th>
+      <td>{{ racun.bankaId }}</td>
+      <td>{{ racun.brojRacuna }}</td>
+      <td>{{ racun.stanje }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteEntity(racun.id)">Izbrisi</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button type="button" class="btn btn-warning" [routerLink]="['/noviRacun']" routerLinkActive="router-link-active" >Dodaj novi racun</button>

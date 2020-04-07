@@ -1,0 +1,31 @@
+<h3>Forma za dodavanje novog racuna</h3>
+<form [formGroup]="formaZaNoviRacun" (ngSubmit)="dodajNoviRacun()">
+  <div class="form-group">
+    <label for="idbanke">ID Banke</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Uniseti id banke"
+      formControlName="bankaId"
+    />
+  </div>
+  <div class="form-group">
+    <label for="primalac">Broj racuna</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Unesite broj racuna"
+      formControlName="brojRacuna"
+    />
+  </div>
+  <div class="form-group">
+    <label for="iznos">Stanje</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Unesite stanje"
+      formControlName="stanje"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Dodaj novi racun</button>
+</form>

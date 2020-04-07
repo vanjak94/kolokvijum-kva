@@ -1,0 +1,24 @@
+<h3>Lista svih racuna</h3>
+<table class="table table-dark" *ngFor="let uplata of listaUplata">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Uplatilac Id</th>
+      <th scope="col">Primalac Id</th>
+      <th scope="col">Iznos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ uplata.id }}</th>
+      <td>{{ uplata.uplatilac }}</td>
+      <td>{{ uplata.primalac }}</td>
+      <td>{{ uplata.iznos }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteEntity(uplata.id)">Izbrisi</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-warning" [routerLink]="['/novaUplata']" routerLinkActive="router-link-active" >Dodaj novu uplatu</button>
